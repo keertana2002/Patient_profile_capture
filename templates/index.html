@@ -1,0 +1,378 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title> Panace.ai</title> 
+   
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <link href="{{url_for('static', filename = 'css/style.css')}}" rel="stylesheet">
+
+
+    <link href="{{url_for('static', filename = 'css/chat.css')}}" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename = 'image/titlelogo.svg')}}">
+ 
+
+
+    
+</head> 
+<body> 
+    <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none; margin-top:95px;width:250px;font-size: 23px;" id="mySidebar">
+        <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+        <a href="#home" class="w3-bar-item w3-button">Home</a>
+        <a href="#aboutus" class="w3-bar-item w3-button">About Us</a>
+        <a href="#book" class="w3-bar-item w3-button">Profile Capture</a>
+        <a href="#summary" class="w3-bar-item w3-button">View Summary</a>
+        <a href="#" class="w3-bar-item w3-button">Doctor</a>
+
+    </div>
+     
+ 
+<header class="header"> 
+    <div class="w3-white">
+    <button class="w3-button w3-white w3-xlarge" onclick="w3_open()"><a href="#" class="logo"> <i class="fas fa-heartbeat"></i> Panace.ai </a>
+        </button>
+    </div>
+
+    
+ 
+    <nav class="navbar">
+    
+    </nav> 
+ 
+    <div id="menu-btn" class="fas fa-bars"></div> 
+ 
+</header> 
+ 
+
+ 
+<section class="home" id="home"> 
+ 
+    <div class="image"> 
+ 
+        <img src="{{url_for('static', filename = 'image/about-img.svg')}}" alt=""> 
+         
+    </div> 
+ 
+   
+ 
+</section> 
+  
+<section class="services" id="aboutus"> 
+ 
+    <h1 class="heading"> About <span>Us</span> </h1> 
+ 
+    <div class="box-container"> 
+ 
+        <p style="text-align:center; font-size: 25px;padding-bottom: 10px;"> This Website gives people an easier way to diagonise their health condition. People tend to panic when they notice slightest of a symptom. In order to reduce that, having a self diagnosis website at hand is something that we all need. This website provides all that options to people.</p>
+    </div> 
+ 
+</section> 
+ 
+
+ 
+<!---section class="doctors" id="doctors"> 
+ 
+    <h1 class="heading"> our <span>doctors</span> </h1> 
+ 
+    <div class="box-container"> 
+ 
+        <div class="box"> 
+            <img src="https://kmchhospitals.com/wp-content/uploads/2016/05/chair_man.jpg" alt=""> 
+            <h3>DR Nalla G Palaniswami</h3> 
+            <span>expert doctor</span> 
+            <div class="share"> 
+                <a href="#" class="fab fa-facebook-f"></a> 
+                <a href="#" class="fab fa-twitter"></a> 
+                <a href="#" class="fab fa-instagram"></a> 
+                <a href="#" class="fab fa-linkedin"></a> 
+            </div> 
+        </div> 
+ 
+        <div class="box"> 
+            <img src="https://kmchhospitals.com/wp-content/uploads/2016/05/vicechair_man.jpg" alt=""> 
+            <h3>DR Thavamani D Palaniswami</h3> 
+            <span>expert doctor</span> 
+            <div class="share"> 
+                <a href="#" class="fab fa-facebook-f"></a> 
+                <a href="#" class="fab fa-twitter"></a> 
+                <a href="#" class="fab fa-instagram"></a> 
+                <a href="#" class="fab fa-linkedin"></a> 
+            </div> 
+        </div> 
+ 
+        <div class="box"> 
+            <img src="https://magarticles.magzter.com/articles/3334/428486/5e8d6fb2f04fd/Healthcare.jpg" alt=""> 
+            <h3>DR Arun Palaniswami</h3> 
+            <span>expert doctor</span> 
+            <div class="share"> 
+                <a href="#" class="fab fa-facebook-f"></a> 
+                <a href="#" class="fab fa-twitter"></a> 
+                <a href="#" class="fab fa-instagram"></a> 
+                <a href="#" class="fab fa-linkedin"></a> 
+            </div> 
+        </div> 
+ 
+        <div class="box"> 
+            <img src="https://kmchhospitals.com/wp-content/uploads/2021/01/WhatsApp-Image-2020-12-25-at-3.58.44-PM-e1610002353577.jpeg" alt=""> 
+            <h3>DR V M Elangkumaran</h3> 
+            <span>expert doctor</span> 
+            <div class="share"> 
+                <a href="#" class="fab fa-facebook-f"></a> 
+                <a href="#" class="fab fa-twitter"></a> 
+                <a href="#" class="fab fa-instagram"></a> 
+                <a href="#" class="fab fa-linkedin"></a> 
+            </div> 
+        </div> 
+ 
+        <div class="box"> 
+            <img src="https://kmchhospitals.com/wp-content/uploads/2016/06/Dr-Pavithra_New.jpg" alt=""> 
+            <h3>DR S Pavithra</h3> 
+            <span>expert doctor</span> 
+            <div class="share"> 
+                <a href="#" class="fab fa-facebook-f"></a>
+
+
+<a href="#" class="fab fa-twitter"></a> 
+                <a href="#" class="fab fa-instagram"></a> 
+                <a href="#" class="fab fa-linkedin"></a> 
+            </div> 
+        </div> 
+ 
+        <div class="box"> 
+            <img src="https://www.myhealthsmith.com/health_admin/image/d3376dr-pavithra.jpg" alt=""> 
+            <h3>DR T R Sivagnanam</h3> 
+            <span>expert doctor</span> 
+            <div class="share"> 
+                <a href="#" class="fab fa-facebook-f"></a> 
+                <a href="#" class="fab fa-twitter"></a> 
+                <a href="#" class="fab fa-instagram"></a> 
+                <a href="#" class="fab fa-linkedin"></a> 
+            </div> 
+        </div> 
+ 
+    </div> 
+ 
+</section--> 
+ 
+
+ 
+<section class="book" id="book"> 
+    <h1 class="heading"> <span>Profile</span> Capture </h1>     
+    <div class="row"> 
+        <div class="image"> 
+            <img src="{{url_for('static', filename = 'image/book-img.svg')}}" alt=""> 
+        </div> 
+        <form action="{{ url_for('insert') }}" method="post"> 
+            <h3>Personal Details</h3>
+            <input type="text" placeholder="Name" name="uname" class="box">   
+            <input type="number" placeholder="Mobilenumber" name="mobnumber" class="box"> 
+            <input type="email" placeholder="Email"  name="email"  class="box"> 
+            <input type="number" placeholder="Age" class="box"  name="age" > 
+            <!-- -------------------------------------------------------------------------------- -->
+            <label class="box" style="float: left;">  
+            <select name="gender" style="float: center;">  
+            <option class ="box" name="gender" value = "m"> Male  
+            </option>  
+            <option class="box" name="gender" value = "f"> Female   
+            </option> 
+            <option class="box" name="gender" value = "o"> Transgender
+            </option> 
+            </select>
+        </label> 
+            <!-- ------------------------------------------------------------------------------------------ -->
+            <input  type="submit" value="Submit Details" name="submit" class="btn">
+        </form> 
+    </div> 
+</section> 
+
+<section class="book" id="summary"> 
+    <h1 class="heading"> <span>View</span> Summary </h1>     
+    <div class="row"> 
+        <div class="image"> 
+            <img  src="{{url_for('static', filename = 'image/home-img.svg')}}" alt="" > 
+        </div> 
+        <form action="{{ url_for('view') }}" method="post"> 
+            <h3>Personal Details</h3>
+  
+            <input type="number" placeholder="Mobile Number" name="mobnumber" class="box">
+            <input type="number" placeholder="OTP" name="uname" class="box">  
+            <!-- -------------------------------------------------------------------------------- -->
+            <!-- ------------------------------------------------------------------------------------------ -->
+            <input  type="button" value="Get OTP" name="submit" class="btn">
+            <input  type="submit" value="Submit Details" name="submit" class="btn">
+            
+        </form> 
+    </div> 
+</section>
+ 
+<!--section class="book" id="summary"> 
+    <h1 class="heading"> <span>View</span> Summary </h1>     
+    <div class="row"> 
+        <div class="image"> 
+            <img  src="{{url_for('static', filename = 'image/home-img.svg')}}" alt="" > 
+        </div> 
+        <form> 
+            <h3>Personal Details</h3>
+  
+            <input type="number" placeholder="Mobile Number" name="mobnumber" class="box">
+            <input type="number" placeholder="OTP" name="uname" class="box">  
+            <input  type="submit" value="Submit Details" name="submit" class="btn">
+        </form> 
+    </div> 
+</section--> 
+ 
+ 
+<!--section class="review" id="review"> 
+     
+    <h1 class="heading"> About<span>Panace.ai</span> </h1> 
+ 
+    <div class="box-container"> 
+ 
+        <div class="box"> 
+            <img src="image/pic-1.png" alt=""> 
+            <h3>Deva</h3> 
+            <div class="stars"> 
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star-half-alt"></i> 
+            </div> 
+            <p class="text">
+                Panace.ai is a consumer healthcare “super app” that provides consumers with on-demand, home delivered access to a wide range of prescription, OTC pharmaceutical, other consumer healthcare products, comprehensive diagnostic test services, and teleconsultations thereby serving their healthcare needs.</p> 
+        </div> 
+ 
+        <div class="box"> 
+            <img src="image/pic-2.png" alt=""> 
+            <h3>Anutha</h3> 
+            <div class="stars"> 
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star-half-alt"></i> 
+            </div> 
+            <p class="text">
+                Every appointment booked via Panace.ai is best for consulting doctor. In Emergency situation, we got an ambulance service in a easy way through this webiste!.</p> 
+        </div> 
+ 
+        <div class="box"> 
+            <img src="image/pic-3.png" alt=""> 
+            <h3>Srinivash</h3> 
+            <div class="stars"> 
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star"></i> 
+                <i class="fas fa-star-half-alt"></i> 
+            </div> 
+            <p class="text">My brother met with an accident, he has a severe blood lose, at the I gave blood request through Panace.ai, We got the blood in a faster way thank you Panace.ai!.</p> 
+        </div> 
+ 
+    </div> 
+ 
+</section--> 
+ 
+
+ 
+<section class="footer"> 
+ 
+    <div class="box-container"> 
+ 
+        <div class="box"> 
+            <h3>speed services</h3> 
+            <a href="#home"> <i class="fas fa-chevron-right"></i> Home </a> 
+            <a href="#aboutus"> <i class="fas fa-chevron-right"></i> About Us</a> 
+            <a href="#book"> <i class="fas fa-chevron-right"></i> Profile Capture</a> 
+            <a href="#review"> <i class="fas fa-chevron-right"></i> View Summary</a> 
+            <a href="#doctors"> <i class="fas fa-chevron-right"></i> Doctor </a> 
+        </div> 
+ 
+        <div class="box"> 
+            <h3>contact info</h3> 
+            <a href="tel:9876543210"> <i class="fas fa-phone"></i>9876543210 </a> 
+            <a href="tel:0422 2345678"> <i class="fas fa-phone"></i> 0422 2345678 </a> 
+            <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSMSqVqhMSmdJXGXmSQQMBRzpsZNqHdKKRJjDfPMpQnKMrgxFKXHjJdjcdBPHqQCsTJsQTMT"><i class="fas fa-envelope"></i> www.cbit.ac.in </a> 
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> Hyderabad, India - 500080 </a> 
+        </div> 
+ 
+        <div class="box"> 
+            <h3>follow us</h3> 
+            <a href="#"> <i class="fab fa-facebook-f"></i> Facebook </a> 
+            <a href="#"> <i class="fab fa-twitter"></i> Twitter </a> 
+            <a href="#"> <i class="fab fa-instagram"></i> Instagram </a> 
+            <a href="#"> <i class="fab fa-linkedin"></i> Linkdin </a> 
+        </div> 
+ 
+    </div> 
+ 
+    <div class="credit">Panace.ai </div> 
+ 
+</section> 
+ 
+
+  
+<div class="chat-bar-collapsible"> 
+        <button id="chat-button" type="button" class="collapsible">Chat with us! 
+            <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i> 
+        </button> 
+ 
+        <div class="content"> 
+            <div class="full-chat-block"> 
+              
+                <div class="outer-container"> 
+                    <div class="chat-container"> 
+                        
+                        <div id="chatbox"> 
+                            <h5 id="chat-timestamp"></h5> 
+                            <p id="botStarterMessage" class="botText"><span>Loading...</span></p> 
+                        </div> 
+ 
+                     
+                        <div class="chat-bar-input-block"> 
+                            <div id="userInput"> 
+                                <input id="textInput" class="input-box" type="text" name="msg" 
+                                    placeholder="Tap 'Enter' to send a message"> 
+                                <p></p> 
+                            </div> 
+ 
+                            <div class="chat-bar-icons"> 
+                                <i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-heart" 
+                                    onclick="heartButton()"></i> 
+                                <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send" 
+                                    onclick="sendButton()"></i> 
+                            </div> 
+                        </div> 
+ 
+                        <div id="chat-bar-bottom"> 
+                            <p></p> 
+                        </div> 
+ 
+                    </div> 
+                </div> 
+ 
+            </div> 
+        </div> 
+ 
+    </div> 
+</body> 
+<script>
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+    }
+    
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
+<script src="{{url_for('static', filename = 'js/chat.js')}}"></script>  
+<script src="{{url_for('static', filename = 'js/responses.js')}}"></script> 
+<script src="{{url_for('static', filename = 'js/script.js')}}"></script>  
+</html>

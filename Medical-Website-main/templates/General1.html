@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title> Panace.ai</title> 
+       
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
+        <link href="{{url_for('static', filename = 'css/ques.css')}}" rel="stylesheet">
+    
+     
+        <link rel="icon" type="image/x-icon" href="{{url_for('static', filename = 'image/titlelogo.svg')}}">
+ 
+    
+        
+    </head> 
+    <body> 
+        <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none; margin-top:95px;width:250px;font-size: 23px;" id="mySidebar">
+            <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+            <a href="{{url_for('Index')}}" class="w3-bar-item w3-button">Home</a>
+            <a href="{{url_for('Index')}}" class="w3-bar-item w3-button">About Us</a>
+            <a href="{{url_for('Index')}}" class="w3-bar-item w3-button">Profile Capture</a>
+            <a href="{{url_for('Index')}}" class="w3-bar-item w3-button">View Summary</a>
+            <a href="#" class="w3-bar-item w3-button">Doctor</a>
+    
+        </div>
+         
+     
+    <header class="header"> 
+        <div class="w3-white">
+        <button class="w3-button w3-white w3-xlarge" onclick="w3_open()"><a href="#" class="logo"> <i class="fas fa-heartbeat"></i> Panace.ai </a>
+            </button>
+        </div>
+    
+        
+     
+        <nav class="navbar">
+        
+        </nav> 
+     
+        <div id="menu-btn" class="fas fa-bars"></div> 
+     
+    </header> 
+    <section class="book" id="book"> 
+        <h1 class="heading"> <span>Profile</span> Capture </h1>     
+        <div class="row"> 
+             
+            <form action="{{ url_for('gen1') }}" method="post"> 
+                <p><label for="name">Please check all the statments given below that apply to you.</label><br>
+                <label for="obese">I'm overweight or obese ?</label><br>
+                <input type="radio" name="obese" value="yes, I am obese " >yes<br>
+                <input type="radio" name="obese" value="no, I am not obese" >no<br>
+                <input type="radio" name="obese" value="no, I Don't Known I am obese" >Don't Known<br>
+                </p>
+                <p><label for="cigarettes">I smoke cigarettes ?</label><br>
+                    <input type="radio" name="cigarettes" value="yes, I smoke " >yes<br>
+                    <input type="radio" name="cigarettes" value="no, I don't smoke" >no<br>
+                    <input type="radio" name="cigarettes" value="no, I Don't Known that I smoke" >Don't Known<br>
+                    </p>
+                    <p><label for="cholesterol">I have high cholesterol ?</label><br>
+                        <input type="radio" name="cholesterol" value="yes, I have high cholesterol " >yes<br>
+                        <input type="radio" name="cholesterol" value="no, I don't have high cholesterol" >no<br>
+                        <input type="radio" name="cholesterol" value="no, I Don't Known I have cholesterol" >Don't Known<br>
+                        </p>
+                    <p><label for="hypertension">I have hypertension ?</label><br>
+                        <input type="radio" name="hypertension" value="yes, I have hypertension " >yes<br>
+                        <input type="radio" name="hypertension" value="no, I don't have hypertension" >no<br>
+                        <input type="radio" name="hypertension" value="no, I Don't Known I have hypertension" >Don't Known<br>
+                        </p>
+                    <p><label for="diabetes">I have diabetes ?</label><br>
+                        <input type="radio" name="diabetes" value="yes, I have diabetes" >yes<br>
+                        <input type="radio" name="diabetes" value="no, I don't have diabetes" >no<br>
+                        <input type="radio" name="diabetes" value="no, I Don't Known I have diabetes" >Don't Known<br>
+                        </p>
+                <br>
+                <!-- -------------------------------------------------------------------------------- -->
+ 
+                <!-- ------------------------------------------------------------------------------------------ -->
+                <input  type="submit" value="Next" name="submit" class="btn">
+            </form> 
+        </div> 
+    </section> 
+</body>
+<script>
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+    }
+    
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+</script>
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panace.ai</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
+    <link
+      href="{{url_for('static', filename = 'css/style.css')}}"
+      rel="stylesheet"
+    />
+
+    <link
+      href="{{url_for('static', filename = 'css/chat.css')}}"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename = 'image/titlelogo.svg')}}">
+    <style>
+      table, th, td {
+  border: 1px solid black;
+  text-align: center;
+}
+    </style>
+  </head>
+
+  <body>
+    <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none; margin-top:95px;width:250px;font-size: 23px;" id="mySidebar">
+      <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+      <a href="{{url_for('Index')}}" class="w3-bar-item w3-button">Home</a>
+      <a href="{{url_for('Index')}}" class="w3-bar-item w3-button">About Us</a>
+      <a href="{{url_for('Index')}}" class="w3-bar-item w3-button">Profile Capture</a>
+      <a href="{{url_for('Index')}}" class="w3-bar-item w3-button">View Summary</a>
+      <a href="#" class="w3-bar-item w3-button">Doctor</a>
+
+  </div>
+
+    <header class="header">
+      <div class="w3-white">
+        <button class="w3-button w3-white w3-xlarge" onclick="w3_open()">
+          <a href="#" class="logo">
+            <i class="fas fa-heartbeat"></i> Panace.ai
+          </a>
+        </button>
+      </div>
+
+      <nav class="navbar"></nav>
+
+      <div id="menu-btn" class="fas fa-bars"></div>
+    </header>
+<h3 class="heading" style="padding: 100px 0px 0px 0px;">Patient Summary</h3>
+    <div style="padding: 60px 150px 150px 150px;">
+      <table>
+        <tr>
+          <th>Serial</th>
+          <th>Name</th>
+          <th>Mobile Number</th>
+          <th>Email</th>
+          <th>Age</th>
+          <th>Gender</th>
+          <th>Symptoms</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+          <td>{{row.0}}</td>
+          <td>{{row.1}}</td>
+          <td>{{row.2}}</td>
+          <td>{{row.3}}</td>
+          <td>{{row.4}}</td>
+          <td>{{row.5}}</td>
+          <td>{{row.6}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>speed services</h3>
+          <a href="#home"> <i class="fas fa-chevron-right"></i> Home </a>
+          <!--a href="#services"> <i class="fas fa-chevron-right"></i> services </a-->
+          <a href="#book">
+            <i class="fas fa-chevron-right"></i> Profile Capture</a
+          >
+          <a href="#review">
+            <i class="fas fa-chevron-right"></i> View Summary</a
+          >
+          <a href="#doctors"> <i class="fas fa-chevron-right"></i> Doctor </a>
+        </div>
+
+        <!--div class="box"> 
+            <h3>our services</h3> 
+            <a href="#services"> <i class="fas fa-chevron-right"></i> blood request </a> 
+            <a href="#book"> <i class="fas fa-chevron-right"></i> get appointment </a> 
+            <a href="#services"> <i class="fas fa-chevron-right"></i> medical care </a> 
+            <a href="#home"> <i class="fas fa-chevron-right"></i> bed availability </a> 
+            <a href="#services"> <i class="fas fa-chevron-right"></i> ambulance service </a> 
+        </div-->
+
+        <div class="box">
+          <h3>contact info</h3>
+          <a href="tel:9361528987"> <i class="fas fa-phone"></i>9361528987 </a>
+          <a href="tel:0422 2369105">
+            <i class="fas fa-phone"></i> 0422 2369105
+          </a>
+          <a
+            href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSMSqVqhMSmdJXGXmSQQMBRzpsZNqHdKKRJjDfPMpQnKMrgxFKXHjJdjcdBPHqQCsTJsQTMT"
+            ><i class="fas fa-envelope"></i> www.drngpit.ac.in
+          </a>
+          <a href="#">
+            <i class="fas fa-map-marker-alt"></i> Coimbatore, India - 641048
+          </a>
+        </div>
+
+        <div class="box">
+          <h3>follow us</h3>
+          <a href="#"> <i class="fab fa-facebook-f"></i> Facebook </a>
+          <a href="#"> <i class="fab fa-twitter"></i> Twitter </a>
+          <a href="#"> <i class="fab fa-instagram"></i> Instagram </a>
+          <a href="#"> <i class="fab fa-linkedin"></i> Linkdin </a>
+        </div>
+      </div>
+
+      <div class="credit">Panace.ai</div>
+    </section>
+  </body>
+<script>
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+  }
+  
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
+<script src="{{url_for('static', filename = 'js/chat.js')}}"></script>  
+<script src="{{url_for('static', filename = 'js/responses.js')}}"></script> 
+<script src="{{url_for('static', filename = 'js/script.js')}}"></script>  
+</html>

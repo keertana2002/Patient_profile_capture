@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title> Panace.ai</title> 
+       
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
+        <link href="{{url_for('static', filename = 'css/ques.css')}}" rel="stylesheet">
+    
+     
+        <link rel="icon" type="image/x-icon" href="{{url_for('static', filename = 'image/titlelogo.svg')}}">
+ 
+    
+        
+    </head> 
+    <body> 
+        <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none; margin-top:95px;width:250px;font-size: 23px;" id="mySidebar">
+            <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+            <a href="{{url_for('Index')}}" class="w3-bar-item w3-button">Home</a>
+            <a href="{{url_for('Index')}}" class="w3-bar-item w3-button">About Us</a>
+            <a href="{{url_for('Index')}}" class="w3-bar-item w3-button">Profile Capture</a>
+            <a href="{{url_for('Index')}}" class="w3-bar-item w3-button">View Summary</a>
+            <a href="#" class="w3-bar-item w3-button">Doctor</a>
+    
+        </div>
+         
+     
+    <header class="header"> 
+        <div class="w3-white">
+        <button class="w3-button w3-white w3-xlarge" onclick="w3_open()"><a href="#" class="logo"> <i class="fas fa-heartbeat"></i> Panace.ai </a>
+            </button>
+        </div>
+    
+        
+     
+        <nav class="navbar">
+        
+        </nav> 
+     
+        <div id="menu-btn" class="fas fa-bars"></div> 
+     
+    </header> 
+    <section class="book" id="book"> 
+        <h1 class="heading"> <span>Profile</span> Capture </h1>     
+        <div class="row"> 
+             
+            <form action="{{ url_for('hd4') }}" method="post"> 
+                <p><label for="name">The exact area where you experience the headache is important to determine the condition. Where exactly do you feel the headache? 
+
+                    </label><br>
+                <input type="radio" name="exper" value=" experience headaches Pulsating or a hammering  " >Pulsating or a hammering pain<br>
+                <input type="radio" name="exper" value=" experience headaches An ache / pressure ">An ache / pressure<br>
+                <input type="radio" name="exper" value=" experience headaches A tight band like feeling ">A tight band like feeling <br>
+                <input type="radio" name="exper" value=" experience headaches A dull pain ">A dull pain<br>
+                </p>
+                <br>
+                <!-- -------------------------------------------------------------------------------- -->
+ 
+                <!-- ------------------------------------------------------------------------------------------ -->
+                <input  type="submit" value="Next" name="submit" class="btn">
+            </form> 
+        </div> 
+    </section> 
+</body>
+<script>
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+    }
+    
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+</script>
+
+</html>
